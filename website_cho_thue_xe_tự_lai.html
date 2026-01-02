@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thuê Xe Tự Lái Đà Lạt – Đặt Xe & Đặt Cọc Online</title>
+  <meta name="description" content="Thuê xe tự lái 4 chỗ, 7 chỗ. Đặt xe và đặt cọc trực tiếp trên website, nhanh chóng – uy tín." />
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#0b0b0b; color:#f5f5f5 }
+    header { background:#000; color:#facc15; padding:20px }
+    header h1 { margin:0 }
+    nav a { color:#facc15; margin-right:15px; text-decoration:none; font-weight:600 }
+    .hero {
+      position: relative;
+      color: #facc15;
+      padding: 90px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-size: cover;
+      background-position: center;
+      animation: slideBg 18s infinite;
+      z-index: 0;
+      filter: brightness(0.45);
+    }
+    .hero * { position: relative; z-index: 1 }
+
+    @keyframes slideBg {
+      0%   { background-image: url('/mnt/data/b424b986-b3a1-4446-8423-9000bd936b34.png'); }
+      33%  { background-image: url('/mnt/data/a14da1ec-9657-424b-8d8e-a7e1f68eac02.png'); }
+      66%  { background-image: url('/mnt/data/393677f0-be5f-458a-b6c1-637878853f53.png'); }
+      100% { background-image: url('/mnt/data/b424b986-b3a1-4446-8423-9000bd936b34.png'); }
+    }
+    .hero h2 { font-size:34px; margin-bottom:10px }
+    .container { max-width:1100px; margin:auto; padding:40px 20px }
+    .cars { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px }
+    .car { background:#111; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.6); overflow:hidden; cursor:pointer }
+    .car img { width:100%; height:180px; object-fit:cover }
+    .car h3 { margin:15px 15px 5px; color:#facc15 }
+    .car p { margin:0 15px 10px }
+    .price { color:#facc15; font-weight:bold }
+    .btn { display:inline-block; background:#facc15; color:#000; padding:10px 16px; margin:15px; border-radius:8px; text-decoration:none; font-weight:bold }
+    .form-box { background:#111; border-radius:16px; padding:30px; box-shadow:0 6px 18px rgba(0,0,0,0.6) }
+    input, select { width:100%; padding:12px; margin-bottom:15px; border-radius:8px; border:1px solid #333; background:#000; color:#fff }
+    button { width:100%; padding:14px; background:#facc15; color:#000; font-size:16px; border:none; border-radius:10px; cursor:pointer; font-weight:bold }
+    footer { background:#000; color:#facc15; text-align:center; padding:15px }
+    .badge { position:absolute; background:#facc15; color:#000; padding:5px 10px; font-size:12px; font-weight:bold; border-radius:0 0 8px 0 }
+    .note { color:#facc15; font-size:13px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚗 Thuê Xe Tự Lái Đà Lạt</h1>
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#xe">Xe</a>
+      <a href="#datxe">Đặt xe</a>
+      <a href="#lienhe">Liên hệ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Đặt Xe & Đặt Cọc Online</h2>
+    <p>Xe đời mới – Thủ tục gọn – Giữ xe chỉ trong 1 phút</p>
+    <a class="btn" href="#datxe">Đặt xe ngay</a>
+  </section>
+
+  <section id="xe" class="container">
+    <h2>🚘 Xe Cho Thuê (Click để chọn xe)</h2>
+    <div class="cars">
+
+      <!-- VF3 HOT -->
+      <div class="car" onclick="chonXe('VinFast VF3 – XE MỚI')">
+        <span class="badge">HOT – XE MỚI</span>
+        <img src="vf3-vang.jpg" alt="VinFast VF3" />
+        <h3>VinFast VF3 – Vàng</h3>
+        <p class="price">600.000đ / ngày (nội thành)</p>
+        <p class="note">🔥 Xe đang được nhiều khách hỏi</p>
+      </div>
+
+      <!-- XE 7 CHỖ -->
+      <div class="car" onclick="chonXe('Xe 7 chỗ – Xpander')">
+        <img src="/mnt/data/b424b986-b3a1-4446-8423-9000bd936b34.png" alt="Xpander" />
+        <h3>Xe 7 chỗ – Xpander</h3>
+        <p class="price">900.000đ / ngày (nội thành)</p>
+        <p class="note">Biển số đã được che</p>
+      </div>
+
+      <div class="car" onclick="chonXe('Xe 7 chỗ – Toyota')">
+        <img src="/mnt/data/a14da1ec-9657-424b-8d8e-a7e1f68eac02.png" alt="Toyota" />
+        <h3>Xe 7 chỗ – Toyota</h3>
+        <p class="price">900.000đ / ngày (nội thành)</p>
+        <p class="note">Biển số đã được che</p>
+      </div>
+
+      <div class="car" onclick="chonXe('Xe 7 chỗ – Toyota Premium')">
+        <img src="/mnt/data/393677f0-be5f-458a-b6c1-637878853f53.png" />
+        <h3>Xe 7 chỗ – Toyota Premium</h3>
+        <p class="price">900.000đ / ngày (nội thành)</p>
+        <p class="note" style="color:#facc15;font-weight:bold">🔥 Xe được đặt nhiều nhất – Có thể full lịch</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="datxe" class="container">
+    <h2>📝 Đặt Xe & Đặt Cọc</h2>
+    <div class="form-box">
+      <form>
+        <input type="text" placeholder="Họ và tên" required />
+        <input type="tel" placeholder="Số điện thoại" required />
+        <input type="text" id="xeDaChon" placeholder="Xe đã chọn" readonly required />
+        <input type="date" required />
+        <input type="date" required />
+        <select id="chonXeSelect" required>
+          <option value="">Chọn loại xe</option>
+          <option>Xe 4 chỗ</option>
+          <option>Xe 7 chỗ</option>
+          <option>VinFast VF3 – Vàng</option>
+          <option>VinFast VF3 – Đỏ</option>
+          <option>Xe 7 chỗ – Toyota Premium (🔥 Đặt nhiều nhất – Có thể full lịch)</option>
+        </select>
+        <p><strong>Ngân hàng:</strong> MB Bank<br/><strong>STK:</strong> 150895081195<br/><strong>Tên:</strong> Trương Thanh Chiến</p>
+        <button type="submit">Xác nhận đặt xe</button>
+      </form>
+      <p style="margin-top:15px;color:#777">* Sau khi chuyển cọc, nhân viên sẽ gọi xác nhận giữ xe.</p>
+    </div>
+  </section>
+
+  <section id="lienhe" class="container">
+    <div class="form-box">
+      <h2>📞 Liên Hệ Nhanh</h2>
+      <p><strong>Hotline:</strong> 0849 456 978</p>
+      <p>
+        <a class="btn" href="https://zalo.me/0849456978" target="_blank">💬 Zalo</a>
+        <a class="btn" href="https://www.facebook.com/PhuKienbyChiha?mibextid=LQQJ4d" target="_blank">📘 Facebook</a>
+      </p>
+      <p><strong>Khu vực:</strong> Đà Lạt – Lâm Đồng</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Thuê Xe Tự Lái Đà Lạt – Đặt xe online uy tín</p>
+  </footer>
+
+<script>
+  function chonXe(tenXe) {
+    const select = document.getElementById('chonXeSelect');
+    if (!select) return;
+
+    let found = false;
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].text.includes(tenXe)) {
+        select.selectedIndex = i;
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      const opt = document.createElement('option');
+      opt.text = tenXe;
+      opt.value = tenXe;
+      opt.selected = true;
+      select.appendChild(opt);
+    }
+
+    document.getElementById('datxe').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
